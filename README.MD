@@ -1,4 +1,10 @@
-#Question 1
+# * Victoria Tran * 
+# CS 349-01 MIDTERM 
+
+---------------------------------------------------
+
+
+# Question 1
 ```html
 
 <!DOCTYPE html>
@@ -45,7 +51,7 @@
 
 ```
 
-#Question 2
+# Question 2
 ```php
 <?php
 $dbServerName = "hello.com";
@@ -63,7 +69,7 @@ echo "Connected!";
 ?>
 
 ```
-#Question 3
+# Question 3
 ```php
 
 $sql = "INSERT INTO admin_table(admin_id, admin_password, admin_name)
