@@ -72,8 +72,23 @@ echo "Connected!";
 ```
 # Question 3
 ```php
+$db_userid = $row->admin_id;
+$db_password = $row→admin_password;
+$encryptpasswd = sha1($userPasswd); 
+$db_name = $row->admin_name;
 
-$sql = "INSERT INTO admin_table(admin_id, admin_password, admin_name)
-VALUES ('$db_userid’', '$db_password', '$db_name)";
+if ($db_userid != $userid || $db_password != $encryptpasswd) {
+ 
+ // ***THE MISSING CODE: add record to admin table ***
+ $query = "INSERT INTO administrator(admin_id, admin_password, admin_name)
+ VALUES('$userid', '$encryptpasswd', '$name')";
+ 
+ $result = mysqli_query($connection, $query);
+ 
+ if (!$result) {
+ echo ("Insert to administrator failed. ". mysqli_error($connection));
+ exit();
+ }
+}
 
 ```
